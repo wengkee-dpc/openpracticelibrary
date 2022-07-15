@@ -21,10 +21,10 @@ jobs:
         uses: openpracticelibrary/wait-for-netlify-action@feature-max-build-timeout
         id: waitForDeployment
         with:
-          site_id: ${{ secrets.NETLIFY_SITE_ID }}
+          site_id: ${{ secrets.TEST_ORG_SECRET_1 }}
           max_build_timeout: 480
         env:
-          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_TOKEN: ${{ secrets.TEST_ORG_SECRET_1 }}
 
       - name: Cypress Tests
         uses: cypress-io/github-action@v2
